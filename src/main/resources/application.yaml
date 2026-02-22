@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: jenkins-pipeline
+  profiles:
+    active: docker
+
+server:
+  port: 8090
