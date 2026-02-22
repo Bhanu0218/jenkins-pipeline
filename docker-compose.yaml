@@ -16,7 +16,7 @@ services:
     container_name: mysql
 
   jenkins-app:
-    image: jenkins-app:v1
+    image: bhanu0218/jenkins-app:${IMAGE_TAG}
     restart: always
     networks:
       - my-network-new
