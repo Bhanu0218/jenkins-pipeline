@@ -24,13 +24,5 @@ pipeline {
                 }
             }
         }
-
-        stage('Deploy to EC2') {
-                    steps {
-                        sshagent(['ec2-ssh-key-id']) {
-                            bat "ssh ec2-user@YOUR_EC2_PUBLIC_IP \"export IMAGE_TAG=${BUILD_NUMBER} && docker-compose down && docker-compose pull && docker-compose up -d\""
-                        }
-                    }
-                }
     }
 }
