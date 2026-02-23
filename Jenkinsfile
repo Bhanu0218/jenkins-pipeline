@@ -4,6 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "bhanu0218/jenkins-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
+        DOCKER_HOST = 'npipe:////./pipe/docker_engine'
     }
 
     stages {
